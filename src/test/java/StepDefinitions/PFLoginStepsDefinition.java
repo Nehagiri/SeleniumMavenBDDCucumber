@@ -1,10 +1,20 @@
 package StepDefinitions;
 
-public class POMLoginStepsDefinition {
+import PageFactory.homePageFactory;
+import PageFactory.loginPageFactory;
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
 
-    /*private static final Logger log = LoggerFactory.getLogger(POMLoginStepsDefinition.class);
-    static WebDriver driver = new EdgeDriver();
-    loginPageObject login;
+import java.time.Duration;
+
+public class PFLoginStepsDefinition {
+
+    static WebDriver driver;
+    loginPageFactory loginPF;
+    homePageFactory homePF;
 
     @Given("User is on login page")
     public void user_is_on_login_page()
@@ -20,27 +30,27 @@ public class POMLoginStepsDefinition {
     //public void user_enters_valid_username_and_password()
     public void user_enters_valid_and(String username, String password)
     {
-     login = new loginPageObject(driver);
-     login.enterUserName(username);
-     login.enterPassword(password);
+        loginPF= new loginPageFactory(driver);
+        loginPF.enterUserName(username);
+        loginPF.enterPassword(password);
     }
 
     @And("Clicks on Login button")
     public void clicks_on_login_button()
     {
-       login.clickLogin();
+       loginPF.clickLogin();
     }
 
     @Then("User is navigated to Home Page")
     public void user_is_navigated_to_home_page()
     {
-        login.isLogoDisplayed();
-        //Assert.assertTrue(driver.findElement(By.xpath("//div[@class='app_logo']")).isDisplayed(),"User is successfully navigated to Home Page");
+        homePF=new homePageFactory(driver);
+        homePF.isCartDisplayed();
     }
 
     @And("Close the browser")
     public void close_the_browser() {
         driver.quit();
     }
-*/
+
 }

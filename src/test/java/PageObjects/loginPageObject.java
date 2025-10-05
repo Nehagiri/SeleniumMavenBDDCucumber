@@ -3,7 +3,7 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class loginPage {
+public class loginPageObject {
 
     WebDriver driver;
     By input_UserName = By.id("user-name");
@@ -12,7 +12,7 @@ public class loginPage {
     By label_Logo= By.xpath("//div[@class='app_logo']");
 
 
-    public loginPage(WebDriver driver) {
+    public loginPageObject(WebDriver driver) {
 
         this.driver = driver;
 
